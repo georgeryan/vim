@@ -1,5 +1,6 @@
 " Requires Vundle:
 " git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"
 
 " don't emulate vi
 set nocompatible
@@ -16,9 +17,12 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'majutsushi/tagbar'
+Plugin 'morhetz/gruvbox'
 call vundle#end()
 filetype plugin indent on
 
+set t_Co=256
 set background=dark
 
 set cursorline
@@ -263,5 +267,5 @@ function! LoadCScope()
   endif
 endfunction
 
-au BufEnter /* call LoadCScope()
+"au BufEnter /* call LoadCScope()
 
