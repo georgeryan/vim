@@ -1,24 +1,28 @@
-" Things in this depend on the following
-" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-" https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" Requires Vundle:
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-call plug#begin()
-Plug 'jlanzarotta/bufexplorer'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'junegunn/vim-easy-align'
-Plug 'scrooloose/nerdtree'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-easytags'
-Plug 'scrooloose/nerdcommenter'
-call plug#end()
+" don't emulate vi
+set nocompatible
+
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim"
+
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'scrooloose/nerdtree'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+Plugin 'scrooloose/nerdcommenter'
+call vundle#end()
+filetype plugin indent on
 
 set background=dark
 
 set cursorline
 highlight CursorLine cterm=none ctermbg=236
-
-" don't emulate vi
-set nocompatible
 
 " keep backups of files
 set backup
